@@ -1,0 +1,6 @@
+<h1>Tiny House Dash Home Page</h1>
+
+<% @user_stories.each do |user_story| %>
+  <%= link_to user_story.name, user_story_path(id: user_story.id)  %></br>
+<% end %>
+

@@ -1,0 +1,20 @@
+<h1><%= @user_story.name %></h1></br>
+
+<h4>Categories</h2>
+
+<ul>
+  <% @user_story.categories.each do |category| %>
+    <p>
+    <%= link_to category.name, category_path(category) %>
+    </p>
+  <% end %></br></br>
+</ul>
+
+<h6>Add a Category</h6>
+<%= form_for Category.new do |f| %>
+  <%= f.label :name %></br>
+  <%= f.text_field :name %><br />
+  <%= f.hidden_field :user_story_id, value: @user_story.id %>
+
+  <%= f.submit "Create" %>
+<% end %>
