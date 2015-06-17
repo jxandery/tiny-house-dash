@@ -1,11 +1,16 @@
 <h1><%= @category.name %></h1>
-  <%= link_to "Update", edit_category_path %>
-  <%= link_to "Delete", category_path, method: :delete %></br></br>
+<%= link_to "Update", edit_category_path %>
+<%= link_to "Delete", category_path, method: :delete %></br></br>
 
 <h4>Items</h2>
-<%= form_for @category do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %></br>
+<% @category.items.each do |item| %>
+  <%= link_to item.name, item_path(id: item.id) %></br>
+<% end %>
+
+<%= form_for Item.new do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
 
   <%= f.submit "Create New Item" %>
 <% end %>
+

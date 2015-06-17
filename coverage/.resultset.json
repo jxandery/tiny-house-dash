@@ -174,7 +174,12 @@
       ],
       "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/config/routes.rb": [
         1,
+        1,
+        1,
+        1,
         null,
+        1,
+        1,
         null,
         null,
         null,
@@ -246,6 +251,10 @@
         1,
         null
       ],
+      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
       "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/helpers/static_pages_helper.rb": [
         1,
         null
@@ -254,7 +263,12 @@
         1,
         null
       ],
+      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
       "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/categories_controller.rb": [
+        1,
         1,
         null,
         1,
@@ -299,9 +313,21 @@
         null,
         null,
         1,
+        null,
+        1,
+        null,
+        1,
+        5,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/items_controller.rb": [
+        1,
         1,
         null,
         1,
@@ -325,15 +351,16 @@
       "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/static_pages_controller.rb": [
         1,
         1,
-        1,
+        2,
         null,
         null
       ],
       "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/user_stories_controller.rb": [
         1,
+        1,
         null,
         1,
-        1,
+        2,
         null,
         null
       ],
@@ -348,6 +375,13 @@
         1,
         null
       ],
+      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/models/user.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
       "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/models/user_story.rb": [
         1,
         1,
@@ -355,6 +389,6 @@
         null
       ]
     },
-    "timestamp": 1433544727
+    "timestamp": 1434575016
   }
 }

@@ -3,9 +3,3 @@
   <%= link_to category.name, category_path(id: category.id) %></br>
 <% end %>
 
-<%= form_for Category.new do |f| %>
-  <%= f.label :name %>:
-  <%= f.text_field :name %><br />
-
-  <%= f.submit "Create" %>
-<% end %>

@@ -3,16 +3,17 @@ require 'rails_helper'
 describe 'guest visits item page' do
   context 'category page' do
     it 'sees the specifics for an category' do
-      Category.create(name: "Design a Tiny House")
-      Category.create(name: "Design a Tiny House")
+      us = UserStory.create(name: "Build a Tiny House")
+      roofing = us.categories.create(name: "Roofing", user_story_id: us.id)
+      roofing.items.create(name: "shingles")
+      roofing.items.create(name: "asphalt shingles")
 
-      visit  ''
+      visit '/'
       click_on('Build a Tiny House')
-      expect(current_path).to eq(user_story_path(2))
-
-      expect(page).to have_content('Supplies')
       expect(page).to have_content('Roofing')
-      expect(page).to have_content('Windows & Doors')
+      save_and_open_page
+      click_on('Roofing')
+      expect(page).to have_content('shingles')
     end
   end
 end

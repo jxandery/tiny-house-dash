@@ -10,4 +10,5 @@ RSpec.describe UserStory, type: :model do
     expect(us.categories.count).to eq(2)
     expect(us.categories.last.name).to eq("Learn programming")
   end
+
 end
