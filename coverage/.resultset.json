@@ -280,7 +280,7 @@
         null,
         null,
         1,
-        1,
+        4,
         null,
         null,
         1,
@@ -317,7 +317,7 @@
         1,
         null,
         1,
-        5,
+        12,
         null,
         1,
         null,
@@ -343,15 +343,26 @@
         null,
         null,
         1,
+        1,
+        1,
+        null,
+        null,
+        1,
         0,
         0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
         null,
         null
       ],
       "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/static_pages_controller.rb": [
         1,
         1,
-        2,
+        4,
         null,
         null
       ],
@@ -360,7 +371,7 @@
         1,
         null,
         1,
-        2,
+        4,
         null,
         null
       ],
@@ -389,6 +400,6 @@
         null
       ]
     },
-    "timestamp": 1434575016
+    "timestamp": 1434577881
   }
 }

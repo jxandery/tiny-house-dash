@@ -7,9 +7,12 @@
   <%= link_to item.name, item_path(id: item.id) %></br>
 <% end %>
 
+<h6>Add an Item</h6>
 <%= form_for Item.new do |f| %>
-  <%= f.label :name %>:
+  <%= f.label :name %>
   <%= f.text_field :name %><br />
+  <%= f.hidden_field :category_id, value: @category.id %>
+
 
   <%= f.submit "Create New Item" %>
 <% end %>

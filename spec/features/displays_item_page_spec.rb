@@ -11,7 +11,6 @@ describe 'guest visits item page' do
       visit '/'
       click_on('Build a Tiny House')
       expect(page).to have_content('Roofing')
-      save_and_open_page
       click_on('Roofing')
       expect(page).to have_content('shingles')
     end
