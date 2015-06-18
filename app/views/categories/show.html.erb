@@ -5,6 +5,8 @@
 <h4>Items</h2>
 <% @category.items.each do |item| %>
   <%= link_to item.name, item_path(id: item.id) %></br>
+  <%= link_to "Update", edit_item_path %>
+  <%= link_to "Delete", item_path, method: :delete %></br></br>
 <% end %>
 
 <h6>Add an Item</h6>

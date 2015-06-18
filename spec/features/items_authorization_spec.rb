@@ -28,7 +28,6 @@ describe 'restrict guest and admin access' do
       click_on('Roofing')
       fill_in "Name", with: "Guest User Suggested Item"
       click_on("Create New Item")
-      save_and_open_page
       expect(page).to have_content('shingles')
       expect(page).to have_content('asphalt shingles')
       expect(page).to have_content("Guest User Suggested Item")
