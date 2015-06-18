@@ -7,6 +7,9 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <% flash.each do |type, message| %>
+      <div class="alert alert-<%= type %>"><%= message %></div>
+    <% end %>
     <% if current_user %>
       Logged in as <%= current_user.email %>
     <%= link_to "Log Out", logout_path %>

@@ -40,7 +40,8 @@ describe 'restrict guest and admin access' do
 
       user1 = User.create(username: "admin-yes",
                           email: "admin@example.com",
-                          password: "password")
+                          password: "password",
+                          admin: true)
       visit '/login'
       expect(page).to have_content('Log In')
       fill_in "Email", with: "admin@example.com"
@@ -61,6 +62,32 @@ describe 'restrict guest and admin access' do
       expect(page).to have_content('Updated Item')
     end
 
+    it 'does not update item as registered user and non-admin' do
+      us = UserStory.create(name: "Build a Tiny House")
+      roofing = us.categories.create(name: "Roofing", user_story_id: us.id)
+      roofing.items.create(name: "shingles")
+
+      user1 = User.create(username: "admin-no",
+                          email: "admin@example.com",
+                          password: "password",
+                          admin: false)
+      visit '/login'
+      expect(page).to have_content('Log In')
+      fill_in "Email", with: "admin@example.com"
+      fill_in "Password", with: "password"
+      click_on('Submit')
+      expect(page).to have_content('Log Out')
+      expect(page).to have_content('Build a Tiny House')
+      click_on('Build a Tiny House')
+      expect(page).to have_content('Roofing')
+      click_on('Roofing')
+      expect(page).to have_content('shingles')
+      click_on('shingles')
+      expect(page).to have_content('Update')
+      click_on('Update')
+      expect(page).to have_content('Not authorized')
+    end
+
     it 'destroys item as admin' do
       us = UserStory.create(name: "Build a Tiny House")
       roofing = us.categories.create(name: "Roofing", user_story_id: us.id)
@@ -68,7 +95,8 @@ describe 'restrict guest and admin access' do
 
       user1 = User.create(username: "admin-yes",
                           email: "admin@example.com",
-                          password: "password")
+                          password: "password",
+                          admin: true)
       visit '/login'
       expect(page).to have_content('Log In')
       fill_in "Email", with: "admin@example.com"

@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_filter :authorize, only: [:edit, :update]
+  before_action :authorize, only: [:edit, :update]
 
   def new
     @item = Item.new
@@ -36,5 +36,11 @@ private
 
   def item_params
     params.require(:item).permit(:name, :category_id)
+  end
+
+  def authorize
+    if current_user && !current_user.admin?
+      redirect_to login_url, alert: "Not authorized"
+    end
   end
 end

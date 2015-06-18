@@ -267,57 +267,6 @@
         1,
         null
       ],
-      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/models/user_story.rb": [
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/models/category.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/models/item.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/static_pages_controller.rb": [
-        1,
-        1,
-        3,
-        null,
-        null
-      ],
-      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        22,
-        null,
-        1,
-        null,
-        1,
-        2,
-        null,
-        null
-      ],
-      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/user_stories_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        3,
-        null,
-        null
-      ],
       "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/categories_controller.rb": [
         1,
         1,
@@ -331,7 +280,7 @@
         null,
         null,
         1,
-        4,
+        7,
         null,
         null,
         1,
@@ -351,6 +300,24 @@
         1,
         0,
         null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        51,
         null,
         1,
         null,
@@ -372,33 +339,66 @@
         null,
         null,
         1,
+        4,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
         2,
         null,
         null,
         1,
-        1,
-        1,
-        null,
-        null,
-        1,
+        3,
         1,
         null,
         null,
+        null
+      ],
+      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/static_pages_controller.rb": [
         1,
+        1,
+        7,
+        null,
+        null
+      ],
+      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/user_stories_controller.rb": [
         1,
         1,
         null,
-        null,
         1,
-        0,
-        0,
+        7,
         null,
-        null,
+        null
+      ],
+      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/models/category.rb": [
         1,
-        null,
         1,
-        2,
-        null,
+        1,
+        null
+      ],
+      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/models/item.rb": [
+        1,
+        1,
         null
       ],
       "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/models/user.rb": [
@@ -408,16 +408,22 @@
         1,
         null
       ],
+      "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/models/user_story.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/sessions_controller.rb": [
         1,
         1,
         null,
         null,
         1,
-        1,
-        1,
-        1,
-        1,
+        3,
+        3,
+        3,
+        3,
         null,
         0,
         0,
@@ -431,6 +437,6 @@
         null
       ]
     },
-    "timestamp": 1434594638
+    "timestamp": 1434669810
   }
 }
