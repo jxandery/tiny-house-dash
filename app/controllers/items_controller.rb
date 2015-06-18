@@ -18,6 +18,15 @@ class ItemsController < ApplicationController
     redirect_to category_path(@item.category)
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = Item.update(params[:id], item_params)
+    redirect_to item_path(id: params[:id])
+  end
+
   def destroy
     Item.find(params[:id]).delete
     redirect_to :index
