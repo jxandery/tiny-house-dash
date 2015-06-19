@@ -6,6 +6,8 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'capybara/rails'
 
+Dir[File.dirname(__FILE__) + "/support/**/*.rb"].each {|f| require f }
+
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
