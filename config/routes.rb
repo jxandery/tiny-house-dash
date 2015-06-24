@@ -13,6 +13,9 @@ Rails.application.routes.draw do
    resources :user_stories
    resources :items
    resources :categories
+   resources :cart_items
+
+   post "/cart_items" => 'cart_items#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

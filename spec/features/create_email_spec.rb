@@ -5,7 +5,7 @@ describe 'guest registers' do
     it 'send email' do
       visit '/'
       click_on('Sign Up')
-      save_and_open_page
+      fill_in 'Username', with: 'wblack'
       fill_in 'Email', with: 'wblack@example.com'
       fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'password'

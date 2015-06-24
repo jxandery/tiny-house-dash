@@ -188,6 +188,9 @@
         1,
         1,
         1,
+        1,
+        null,
+        1,
         null,
         null,
         null,
@@ -310,6 +313,12 @@
       ],
       "/Users/jackyeh/Desktop/hackers_education/Turing/projects/tiny_house_dash/app/controllers/application_controller.rb": [
         1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        41,
         null,
         null,
         1,
@@ -473,6 +482,6 @@
         null
       ]
     },
-    "timestamp": 1434679836
+    "timestamp": 1435181775
   }
 }

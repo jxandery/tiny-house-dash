@@ -5,8 +5,11 @@
 <h4>Items</h2>
 <% @category.items.each do |item| %>
   <%= link_to item.name, item_path(id: item.id) %></br>
+  <%= button_to 'Add to Cart', cart_items_path(item_id: item.id)  %></br></br>
   <%= link_to "Update", edit_item_path %>
   <%= link_to "Delete", item_path, method: :delete %></br></br>
+
+  <%= button_to 'Add to Cart', cart_items_path(item_id: item.id)  %>
 <% end %>
 
 <h6>Add an Item</h6>
