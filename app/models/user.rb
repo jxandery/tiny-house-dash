@@ -6,7 +6,17 @@ class User < ActiveRecord::Base
   has_many :participants, through: :relationships
 
   def coach
-    require "pry"; binding.pry
-    Relationship.where(participant_id: self.id, end_date: nil)
+    relationship = Relationship.where(participant_id: self.id, end_date: nil).first
+    User.find(relationship.coach_id)
+  end
+
+  def coach_history
+    relationships = Relationship.where(participant_id: self.id)
+    relationships.map { |r| User.find(r.coach_id) }
+  end
+
+  def participant_history
+    relationships = Relationship.where(coach_id: self.id)
+    relationships.map { |r| User.find(r.participant_id) }
   end
 end
