@@ -1,16 +1,16 @@
 class User < ActiveRecord::Base
   has_secure_password
-  has_many :participants_coaches, class_name: 'CoachParticipant',
-                           foreign_key: 'participant_id',
+  has_many :clients_coaches, class_name: 'CoachClient',
+                           foreign_key: 'client_id',
                            dependent: :destroy
-  has_many :coach_participants, class_name: 'CoachParticipant',
+  has_many :coach_clients, class_name: 'CoachClient',
                            foreign_key: 'coach_id',
                            dependent: :destroy
-  has_many :coaches, through: :participants_coaches, source: :coach
-  has_many :participants, through: :coach_participants, source: :participant
+  has_many :coaches, through: :clients_coaches, source: :coach
+  has_many :clients, through: :coach_clients, source: :client
 
   def coach
-    coach_participant = CoachParticipant.where(participant_id: self.id, end_date: nil).first
-    User.find(coach_participant.coach_id)
+    coach_client = CoachClient.where(client_id: self.id, end_date: nil).first
+    User.find(coach_client.coach_id)
   end
 end

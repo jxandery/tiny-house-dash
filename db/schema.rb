@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160826200727) do
+ActiveRecord::Schema.define(version: 20160826210123) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,14 +25,18 @@ ActiveRecord::Schema.define(version: 20160826200727) do
 
   add_index "categories", ["user_story_id"], name: "index_categories_on_user_story_id", using: :btree
 
-  create_table "coach_participants", force: :cascade do |t|
+  create_table "coach_clients", force: :cascade do |t|
     t.integer  "coach_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.integer  "participant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "client_id"
     t.date     "start_date"
     t.date     "end_date"
   end
+
+  add_index "coach_clients", ["client_id"], name: "index_coach_clients_on_client_id", using: :btree
+  add_index "coach_clients", ["coach_id", "client_id"], name: "index_coach_clients_on_coach_id_and_client_id", unique: true, using: :btree
+  add_index "coach_clients", ["coach_id"], name: "index_coach_clients_on_coach_id", using: :btree
 
   create_table "items", force: :cascade do |t|
     t.string   "name"
