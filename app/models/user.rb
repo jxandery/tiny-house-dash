@@ -10,7 +10,6 @@ class User < ActiveRecord::Base
   has_many :clients, through: :coach_clients, source: :client
 
   def coach
-    coach_client = CoachClient.where(client_id: self.id, end_date: nil).first
-    User.find(coach_client.coach_id)
+    self.coaches.first
   end
 end
